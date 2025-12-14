@@ -1,0 +1,7 @@
+{
+  "name": "ChromaCal",
+  "description": "A professional monitor calibration tool using your smartphone camera as a colorimeter. Achieve accurate colors for design and photography workflows.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
