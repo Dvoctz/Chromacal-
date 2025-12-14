@@ -1,3 +1,4 @@
+
 export enum AppMode {
   LANDING = 'LANDING',
   DISPLAY_SOURCE = 'DISPLAY_SOURCE', // The screen being calibrated
@@ -41,11 +42,12 @@ export const DEFAULT_SETTINGS: CalibrationSettings = {
   targetWhitePoint: 'D65 (6500K)'
 };
 
+// Reordered: White is now first to allow Camera Exposure Locking phase
 export const TARGET_POINTS: MeasurementPoint[] = [
+  { label: 'Reference White (Lock Exposure)', targetColor: { r: 255, g: 255, b: 255 } },
   { label: 'Red Reference', targetColor: { r: 255, g: 0, b: 0 } },
   { label: 'Green Reference', targetColor: { r: 0, g: 255, b: 0 } },
   { label: 'Blue Reference', targetColor: { r: 0, g: 0, b: 255 } },
-  { label: 'White Point', targetColor: { r: 255, g: 255, b: 255 } },
   { label: 'Black Point', targetColor: { r: 0, g: 0, b: 0 } },
   { label: '50% Gray', targetColor: { r: 128, g: 128, b: 128 } },
 ];
